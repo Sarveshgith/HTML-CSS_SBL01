@@ -1,7 +1,10 @@
 /* → anywhere inside
 > → direct child
 + → next sibling
-~ → all next siblings */
+~ → all next siblings 
+all the above = only when belongs to same parent
+
+:has() => when different parent*/
 
 body {
   font-family: Arial, sans-serif;

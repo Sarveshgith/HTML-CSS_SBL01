@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: #f7f8fa;
+}
+
+.page,
+header,
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tabs Functionality */
+.tabs-choose {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.tabs-choose input {
+  display: none;
+}
+
+.con {
+  background: #fff;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tabs-choose label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #eef1f4;
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+.tabs-choose label:hover {
+  background: #f2f6ff;
+}
+
+.tabs-choose label::after {
+  content: '+';
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.con section {
+  width: 100%;
+  display: none;
+  padding: 14px 16px 16px;
+  box-sizing: border-box;
+}
+
+.con section h2,
+.con section h3,
+.con section p,
+.con section ul {
+  margin-top: 0;
+}
+
+.con input:checked + label {
+  background: #eaf1ff;
+  color: #0b57d0;
+}
+
+.con input:checked + label::after {
+  content: '−';
+}
+
+/* Main Functionality */
+.con input:checked ~ section {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  header,
+  main {
+    padding: 12px;
+  }
+
+  .tabs-choose {
+    margin: 16px 0;
+  }
+
+  .tabs-choose label,
+  .con section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
